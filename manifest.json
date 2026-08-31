@@ -1,24 +1,9 @@
 {
-  "schema": "ownership-attestation/1.0",
-  "package": "ssot-content-management",
+  "name": "ssot-content-management",
+  "normalizedName": "ssot-content-management",
+  "description": "单一事实源（SSOT）内容体系方法论，用于回答「内容老变、每次都要改很多地方」「怎么改一处全生效」「怎么少返工」这类问题。任何内容体系（知识库 / 官网 / 公众号 / 文档 / 投标 / 培训材料）都应遵循「事实库管事实 → 内容库管内容 → 发布层自动生成」三层架构，配合变更影响清单减少返工。事实库即真实参照法（Grounded Reference Method）在内容工程上的落地——所有对外表述挂回唯一事实条目，事实条目按注册方法论登记与版本化。当提到\"减少变更\"\"减少返工\"\"单一事实源\"\"SSOT\"\"改一处生效\"\"内容经常变\"\"每次都要改很多地方\"时使用。触发词：单一事实源、SSOT、改一处生效、减少返工、变更影响清单、内容体系架构、事实库、single source of truth。本技能为通用方法论工具，非医疗器械 / 非医疗软件，无疗效或临床声明；详见包内免责声明。",
+  "author": "诺源(Arche)@SynomosAI",
+  "copyright": "SynomosAI",
   "version": "1.0.0",
-  "author": "注册老炮 (MedXpert)",
-  "year": "2026",
-  "timestamp_utc": "2026-08-30T14:38:39.997096+00:00",
-  "timestamp_local": "2026-08-30T22:38:39.997104",
-  "package_fingerprint_sha256": "3413811e2d0f054f0ec8a8c9aa743afcf920b422f7933e6dcf323ea497d49856",
-  "files": [
-    {
-      "path": "LICENSE.md",
-      "sha256": "841a73c80c4e2ccd88d0001336ef64230261c4d8dc738fba074f372d7a19327f"
-    },
-    {
-      "path": "SKILL.md",
-      "sha256": "adc7975e10157d84d6fd561abd80b9874576dbaba7305a8e2badfa43bdd68582"
-    },
-    {
-      "path": "安全审计报告.md",
-      "sha256": "61f138a331ad91524704d774300bf96f739b705a5c9d18a2d6d0934190d85127"
-    }
-  ]
+  "license": "MIT"
 }
