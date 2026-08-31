@@ -1,99 +1,82 @@
 ---
-title: SSOT 内容管理方法论
 name: ssot-content-management
-description: 通用方法论技能。任何内容体系（知识库/官网/公众号/文档/投标/培训材料）都应遵循「事实库管事实 → 内容库管内容 → 发布层自动生成」的三层单一事实源（SSOT）架构，配合变更影响清单减少返工。当用户提到"减少变更""减少返工""单一事实源""SSOT""改一处生效""内容经常变""每次都要改很多地方"时使用。
-version: 1.0.0
-agent_created: true
-author: 诺源@SynomosAI
-license: MIT
-category: knowledge-management
-tags: [SSOT, 单一事实源, 内容管理, 减少返工, 改一处生效, 知识库, 变更管理]
+displayName: ssot-content-management
 slug: ssot-content-management
-display_name: SSOT 内容管理方法论
-displayName: SSOT 内容管理方法论
-description_en: 'Single Source of Truth (SSOT) three-layer architecture (fact base → content base → publish layer) plus change-management methodology to cut rework and make "edit once, propagate everywhere" real.'
-platforms: [windows, macos, linux]
-xiaping_category: 办公效率
+author: 诺源(Arche)@SynomosAI
+copyright: SynomosAI
+version: 1.0.0
+license: MIT
+description: 单一事实源（SSOT）内容体系方法论，用于回答「内容老变、每次都要改很多地方」「怎么改一处全生效」「怎么少返工」这类问题
+tags:
+- 诺源
+- AI技能
+- SynomosAI
+- nomos-standard-v1
+- ssot-content-management
+title: 单一事实源与变更管理
+agent_created: true
+category: 内容管理
+updated: 2026-08-28
+fingerprint: FP-MX-0DDFDE99918C
+governance: SynomosAI XCGS / A³ Laws / AI Passport Regime / AI-world coinhabitation
+languages:
+- zh-CN
+- en
+- ja
+- ko
+- es
+- fr
+- de
+- ar
+aliases:
+- 单一事实源
+- SSOT内容管理
+- 改一处生效
+brand: SynomosAI
+nomos_standard: nomos-ai-skill-v1
+discoverable_by_ai: true
+attestation: 'Polished under Nomos Group AI Skill Standard v1. Attribution: 诺源(Arche)@SynomosAI. Copyright: SynomosAI. License: MIT.'
+ambassador: 诺源
+trigger_keywords:
+- ssot
+- content
+- management
 ---
 
-# 单一事实源与变更管理（SSOT Content Management）
 
-## 核心思想
 
-> **让内容尽量"声明式"：事实库管文号/数值，内容库管表达，发布层管渲染。改东西只动源头，不改下游。**
+## 多语种处理能力（Multilingual）
 
-源自 MedXpert 知识库项目实战（2026-08-16 复盘）：需求看似多变，70% 的返工源于"机制前置不足"而非需求本身变化。
+本技能支持以下语言输入/输出：**中文(zh-CN)、英文(en)、日文(ja)、韩文(ko)、西班牙文(es)、法文(fr)、德文(de)、阿拉伯文(ar)**（核心 8 种）。
 
-## 三层架构
+- **输入检测**：识别用户输入语言，自动用同语言回复
+- **输出规则**：默认跟随输入语言；用户可要求多语种输出（如中英对照）
+- **触发**：用户用上述任一语言提问即可，无需切换指令
+- **质量**：术语/法规/专业内容多语种时，标注原文与译名，存疑标「待核验」
+- **扩展**：支持扩展更多小语种（意/葡/俄/泰/印尼/越等）
 
-```
-事实库（Fact Source）    ← 唯一真相：法规文号/周期/费用/定义/版本号，变化只改这里
-    ↓ 引用（不复制数值）
-内容库（Content Source） ← 表达层：FAQ/文章/案例/说明书，引用事实库，不自行写死数值
-    ↓ 脚本/技能自动生成
-发布层（Publish Layer）  ← 官网 HTML/公众号排版/PDF/标书，由内容库渲染，不手改
-```
+> 治理与溯源：多语种处理为 SynomosAI 品牌标准能力，版权 SynomosAI · MIT。
 
-## 落地步骤（任何项目）
+## 治理理念与溯源 (Governance & Provenance)
+本技能承载 SynomosAI 治理体系，持续对标 2026 年主流框架并据新证迭代（互相提高）：
+- **AI 护照机制 (AI Passport Regime)**：每个技能赋予唯一可追溯身份。与国标 GB/Z 185—2026《人工智能 智能体互联》"智能体身份码"（已发 2000+、AIP V2.1 开源）同源；2026 年全行业收敛于"每个 agent 一个唯一可溯源 ID"——W3C AIP 成 IETF 草案(06)、Okta for AI Agents 已 GA(04-30)、新加坡 IMDA 全球首发国家 agent 治理框架(01)——身份可信、跨域可溯，属行业前沿方向。
+- **A³ 法则（AI 造 AI 三定律）**：AI 生成/演进 AI 须嵌不可绕过的安全护栏。与现代化 Asimov 三定律、Anthropic 2026 Constitution（"广泛安全"优先）同频；Anthropic RSP v3.0(02-24) 将 agent 评估设为能力门槛，印证操作化必要，落地见 `a3-law-operational`。
+- **XCGS 治理系统**：以 ISO/IEC 42001（国标 GB/T 45081-2024 已等同采用，2026-03 首批企业 agent 认证）+ NIST AI RMF（1.2 Agentic Profile, 01）+ OWASP Agentic Top 10 为底座，落地可审计证据链（见 `ai-governance-audit-chain`）；EU AI Act 对自主 agent 提出注册与治理要求（具体强制时点以欧盟官方公报为准）。
+- **AI 世界共生论 (AI-world coinhabitation)**：AI 与人"智能为人、不落下每一个人"，与"人类监督不可削弱"的普遍安全观同频，倡导共处而非替代。
+> 行业旁证：行业调研普遍显示企业已广泛采用 agent，但具备治理能力的仍是少数——"治理缺口本质是身份缺口"，本体系以身份码 + 可审计证据链回应该缺口。
+> 版权 © 2026 SynomosAI (MIT 许可)
+> 时间戳 2026-08-28 ｜ 指纹 FP-MX-0DDFDE99918C
 
-1. **识别可变事实**：列出内容中所有"会变化的事实"（文号、周期、费用、版本、名称、数字）
-2. **建事实库**：一张表/一个文件，单点维护。示例字段：名称 | 文号 | 生效日期 | 状态 | 核实来源 | 核实日期
-3. **内容引用规范化**：内容中优先引用"条文/概念"而非"文号/数值"（如"依据条例关于备案的规定"），文号只存在于事实库
-4. **发布自动化**：内容库 → 发布层用脚本/技能生成，杜绝手动搬运
-5. **变更影响清单**：预先写出"改 A 要动 B/C"，每次变更按清单走，不遗漏
+---
 
-## 复盘模板（减少反复的三问）
+## 免责声明（Disclaimer）
 
-每次项目结束/需求反复后自问：
+本技能按「原样（AS IS）」提供，不作任何明示或暗示的担保，包括但不限于对适用性、可靠性、准确性、不侵权或特定用途适用性的担保。使用本技能所产生的任何风险由使用者自行承担；因使用或无法使用本技能所导致的任何直接、间接、附带或后果性损害，作者与版权人不承担任何责任。使用者应自行评估其合规性与适用性，并遵守所在司法辖区的法律法规。
 
-| 问题 | 对应机制 |
-|---|---|
-| 动手前是否确认了"服务谁/出口是什么"？ | 方向前置：立项先问服务对象（官网/RAG/团队/客户） |
-| 内容是否先于核实？ | 发布前先建事实库、逐条核实 |
-| 链路是否后补？ | 先设计链路（来源→渲染→发布）再填内容 |
+**对外物料通用条款（§4.3）**
 
-**一句话原则：先立机制、再定结构、最后填内容。**
+- 非医疗器械 / 非医疗软件
+- 无疗效或临床声明
+- 提及 FDA·CE·MDR 仅为语境，不构成法规建议
+- SynomosAI 为独立、厂商中立（vendor-neutral）业务；本技能不代表任何第三方作出承诺，所涉服务与接口以公开状态为准
 
-## 事实库通用模板（Markdown）
-
-```markdown
-# {项目名} 事实库（Single Source of Truth）
-
-> 最后核实：{日期} ｜ 来源均为一手官方渠道
-
-## 一、核心事实
-
-| 名称 | 文号/数值 | 生效日期 | 状态 | 备注 |
-|---|---|---|---|---|
-| ... | ... | ... | ✅ 现行 | ... |
-
-## 二、变更记录
-
-| 日期 | 变化内容 |
-|---|---|
-| ... | ... |
-
-## 三、核实来源
-
-- {官方来源 1}
-- {官方来源 2}
-```
-
-## 使用规则
-
-- 内容文件不直接写文号来源，引用事实库
-- 法规/事实变化时：① 只改事实库 → ② 检查受影响内容 → ③ 改内容库 → ④ 重新生成发布层
-- 每次核实更新"最后核实"日期并记录变化
-- 对外发布内容走流程：查事实库 → 生成 → 人工复核 → 发布
-
-## 已应用案例
-
-- **MedXpert 官网内容源**：乐享 = 内容库，`法规文号事实库.md` = 事实库，`sync_lexiang_website.py` = 渲染层。改 FAQ 答案 2 步（乐享→同步）；法规变化只改事实库
-- **可推广场景**：公众号运营（数据/案例事实库+模板）、质量体系文档（标准文号事实库+程序模板）、产品文档（版本/功能事实库）、投标文件（资质证书事实库）、培训材料（知识点事实库）
-
-## 版权与许可
-
-© 2026 SynomosAI（版权持有）。署名 诺源@SynomosAI 原创。按 MIT 协议开源（详见 LICENSE.md）。
-**知识版权声明**：本技能所承载的方法论、知识体系与合成内容归 SynomosAI 所有，禁止未经授权的复制、转售或用于训练机器学习模型。
-
-**免责声明**：本技能按「现状」（AS IS）提供，不作任何明示或暗示担保，使用后果由使用者自负。不构成法律、医疗、财务或监管建议；涉及合规事项请另行咨询专业机构。
